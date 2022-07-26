@@ -26,6 +26,39 @@ const projects = (await Astro.glob("./project/**/*.md"))
                 margin: auto;
                 width: 85%;
             }
+
+            .work-title {
+                font: revert !important;
+                font-size: 2.5em;
+            }
+
+            .timeline-img {
+            border-radius: 50%; width: 60px; height: 60px;
+            }
+
+             @media (max-width: 420px) {
+                .work-title {
+                      font-size: 1.5em !important;
+                       margin-bottom: 0;
+                       margin-top: 1em;
+                }
+                 .grid {
+                    width: 100%;
+                    grid-gap: 1rem;
+                }
+                .timeline-header {
+                      font-size: 1em !important;
+                      margin-bottom: 10px;
+                }
+                .color-contrast-medium {
+                    font-size: 0.85em !important;
+                }
+                .timeline-img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
         </style>
         <link href="/timeline.css" rel="stylesheet" />
 	</head>
@@ -34,18 +67,18 @@ const projects = (await Astro.glob("./project/**/*.md"))
 		<div class="wrapper">
 			<div class="grid">
 
-                  <h1 style="font: revert !important; font-size: 2.5em !important;">My Work Experiences</h2>
+                  <h1 class="work-title">My Work Experiences</h2>
                   <section class="cd-timeline" style="font: revert !important;">
                     <div class="container max-width-lg cd-timeline__container">
 
                       <div class="cd-timeline__block">
 
                       <div class="cd-timeline__img">
-                            <img  style="border-radius: 50%; width: 60px; height: 60px;" src="/playyouth.JPG" />
+                            <img class="timeline-img" src="/playyouth.JPG" />
                       </div>
 
                         <div class="cd-timeline__content text-component">
-                          <h2>Founder of PLAY Coding, 2020</h2>
+                          <h2 class="timeline-header">Founder of PLAY Coding, 2020</h2>
                           <p class="color-contrast-medium">
                           - Founded a coding organization that teaches Web Development (HTML, CSS, JS), Python, and Java to elementary and middle school students in the Bay Area.
                           </p>
@@ -60,11 +93,11 @@ const projects = (await Astro.glob("./project/**/*.md"))
                       <div class="cd-timeline__block">
 
                         <div class="cd-timeline__img">
-                                <img  style="border-radius: 50%; width: 60px; height: 60px;" src="https://c8.alamy.com/comp/2E2PJKR/vector-logo-of-a-tutor-educational-courses-2E2PJKR.jpg" />
+                               <img class="timeline-img" src="https://c8.alamy.com/comp/2E2PJKR/vector-logo-of-a-tutor-educational-courses-2E2PJKR.jpg" />
                           </div>
 
                         <div class="cd-timeline__content text-component">
-                          <h2>Volunteer Tutor, 2020-present</h2>
+                          <h2 class="timeline-header">Volunteer Tutor, 2020-present</h2>
                           <p class="color-contrast-medium">
                            - Tutored various students from elementary school to middle school in subjects such as English, math, science, music, and programming for about 2-4 hours per week.
                           </p>
@@ -76,11 +109,11 @@ const projects = (await Astro.glob("./project/**/*.md"))
                       <div class="cd-timeline__block">
 
                     <div class="cd-timeline__img">
-                        <img  style="border-radius: 50%; width: 60px; height: 60px;" src="https://hackplus.io/img/logos/logo.svg" />
+                        <img class="timeline-img" src="https://hackplus.io/img/logos/logo.svg" />
                     </div>
 
                         <div class="cd-timeline__content text-component">
-                          <h2>Software Engineer Intern at Hack+, 2022-present</h2>
+                         <h2 class="timeline-header">Software Engineer Intern at Hack+, 2022-present</h2>
                           <p class="color-contrast-medium">
                             - Helped develop a finance-based web application to help students start their own businesses and ventures
                           </p>
@@ -96,6 +129,7 @@ const projects = (await Astro.glob("./project/**/*.md"))
                   </section> <!-- cd-timeline -->
 			</div>
 		</div>
-		<Footer />
+		<Footer  />
 	</body>
+
 </html>

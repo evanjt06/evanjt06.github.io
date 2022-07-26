@@ -64,6 +64,36 @@ const { content } = Astro.props;
 				font-size: var(--f-u1);
 				line-height: 2.2;
 			}
+
+			.tagline-link {
+			    margin-bottom: 3em;
+			}
+
+			 @media (max-width: 420px) {
+                .title {
+                    font-size: var(--f-u5);
+                }
+                .hero {
+                    padding: 6rem;
+                }
+                .tagline {
+                    font-size: var(--f-u1);
+                    margin-top: -2em;
+                }
+                .tagline-link {
+                margin-bottom: 0;
+                }
+                .tagline-tech {
+                margin-top: 1em;
+                margin-bottom: -2em;
+                }
+                .tag {
+                font-size: 12px;
+                }
+                .content {
+                font-size: 16px;
+                }
+			 }
 		</style>
 	</head>
 	<body>
@@ -73,11 +103,13 @@ const { content } = Astro.props;
 		<div class="leadIn">
 			<div class="wrapper pt8 pb8 mb8 tac">
 				<h3 class="tagline">{content.description}</h3>
-				<p style="margin-bottom: 3em"><a target="_blank" rel="noopener noreferrer" class="tagline" href={content.link}>{content.link}</h3></p>
+				<p class="tagline-link"><a target="_blank" rel="noopener noreferrer" class="tagline" href={content.link}>{content.link}</h3></p>
 				{content.link2 &&
-				<p style="margin-bottom: 3em"><a target="_blank" rel="noopener noreferrer" class="tagline" href={content.link2}>{content.link2}</h3></p>
+				<p class="tagline-link"><a target="_blank" rel="noopener noreferrer" class="tagline" href={content.link2}>{content.link2}</h3></p>
 				}
+				<p class="tagline-tech">
 				Technologies used: {content.tags.map((t) => <span class="tag">{t}</span>)}
+				</p>
 			</div>
 		</div>
 		<div class="wrapper wrapper__readable">

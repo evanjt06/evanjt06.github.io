@@ -25,13 +25,28 @@ const projects = (await Astro.glob("./project/**/*.md"))
 				margin: auto;
 				width: 80%;
 			}
+
+			.grid-title {
+			    margin-bottom: -0.25em;
+			}
+
+			 @media (max-width: 420px) {
+			    .grid-title {
+			        font-size: 1.5em;
+			         margin-bottom: 0;
+			    }
+			    .grid {
+			        width: 100%;
+			        grid-gap: 1rem;
+                }
+			 }
 		</style>
 	</head>
 	<body>
 		<Nav />
 		<div class="wrapper">
 			<div class="grid">
-			    <h1 style="margin-bottom: -0.25em;">My Projects</h1>
+			    <h1 class="grid-title">My Projects</h1>
 				{projects.map((project) => {
 				return <PortfolioPreview project={project} />
 				})}
