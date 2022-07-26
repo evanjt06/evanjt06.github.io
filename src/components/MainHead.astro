@@ -8,7 +8,7 @@ const {
 
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 
 <link rel="icon" type="image/x-icon" href="/et.jpeg" />
@@ -18,3 +18,34 @@ const {
 	href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
 	rel="stylesheet"
 />
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script>
+
+if (typeof window !== 'undefined') {
+    const app = document.getElementById("typer")
+    const typewriter = new Typewriter(app, {
+       loop: true,
+       delay: 75,
+     });
+
+     typewriter
+       .pauseFor(300)
+       .typeString('Software Engineer')
+       .pauseFor(600)
+       .deleteChars(17)
+       .pauseFor(200)
+       .typeString('Web Developer')
+        .pauseFor(600)
+       .deleteChars(17)
+         .pauseFor(200)
+        .typeString('iOS Developer')
+         .pauseFor(600)
+        .deleteChars(17)
+       .pauseFor(200)
+        .typeString('High School Student')
+        .pauseFor(600)
+       .deleteChars(17)
+      .pauseFor(200)
+       .start();
+}
+</script>

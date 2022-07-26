@@ -31,7 +31,7 @@ const projects = (await Astro.glob("./project/**/*.md"))
 		<Nav />
 		<div class="wrapper">
 			<div class="grid">
-			    <h1 style="margin-bottom: -0.25em;">MY PROJECTS</h1>
+			    <h1 style="margin-bottom: -0.25em;">My Projects</h1>
 				{projects.map((project) => {
 				return <PortfolioPreview project={project} />
 				})}
