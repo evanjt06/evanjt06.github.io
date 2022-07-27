@@ -36,6 +36,31 @@
   font-weight: 300;
 }
 
+@keyframes move {
+
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes moveInner {
+
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    transform: translateY(0);
+    border-color: rgba(255, 255, 255, 0.625);
+  }
+
+}
+
 .link {
   position: absolute;
   top: 0;
@@ -63,6 +88,14 @@
       border-color: rgba(255, 255, 255, 0.625);
     }
   }
+}
+
+.link {
+  animation: move 1.7s infinite alternate;
+}
+
+.linkInner {
+  animation: moveInner 1.7s infinite alternate;
 }
 
 .linkInner {

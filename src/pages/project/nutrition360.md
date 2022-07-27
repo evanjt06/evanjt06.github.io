@@ -6,7 +6,7 @@ publishDate: 2022-06-04 00:00:00
 img: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
 description: Nutrition360, an iOS application for tracking and analyzing nutritional data.
 link: https://github.com/evanjt06/NutritionGram
-link2: http://evantu.me/nutrition360.mp4
+link2: https://youtu.be/X0UeJ3Vvjxg
 tags:
 - Swift (SwiftUI)
 - CreateML
